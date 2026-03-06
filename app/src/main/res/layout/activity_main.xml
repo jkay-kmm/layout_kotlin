@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:orientation="vertical"
@@ -11,53 +12,39 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/txtSoThich"
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sở thic của tôi" />
+        android:text="Chọn hình để hiển thị" />
 
-    <CheckBox
-        android:id="@+id/cbNgheNhac"
+    <RadioGroup
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Nghe nhạc" />
+        android:layout_height="wrap_content" >
 
-    <CheckBox
-        android:id="@+id/CbXemPhim"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Xem Phim" />
+        <RadioButton
+            android:id="@+id/rdHinh1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ảnh 1" />
 
-    <CheckBox
-        android:id="@+id/cbBongDa"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Xem bóng đá" />
+        <RadioButton
+            android:id="@+id/rdHinh2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ảnh 2" />
 
-    <CheckBox
-        android:id="@+id/cbChoiCau"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Chơi cầu" />
+    </RadioGroup>
 
-    <Button
-        android:id="@+id/btnSoThich"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Cho sở thicích" />
+    <ImageView
+        android:id="@+id/imgHinhAnh"
+        android:layout_width="wrap_content"
+        android:layout_height="460dp"
+        android:scaleType="fitStart"
+        app:srcCompat="@drawable/hinh1" />
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Sở thích của bạn là" />
-
-    <EditText
-        android:id="@+id/edtSothich"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:hint="Sở thích được hiển thị tạdađâ"
-         />
+    <ImageButton
+        android:id="@+id/btnThoat"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        app:srcCompat="@drawable/hinh2" />
 </LinearLayout>

@@ -9,26 +9,22 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         addEvents()
-
-
     }
 
     private fun addEvents() {
-        binding.btnSoThich.setOnClickListener {
-            xuLyChonSoThich()
+        binding.rdHinh1.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                binding.imgHinhAnh.setImageResource(R.drawable.hinh1)
+            }
         }
-    }
+        binding.rdHinh2.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                binding.imgHinhAnh.setImageResource(R.drawable.hinh2)
+            }
+        }
+        binding.btnThoat.setOnClickListener {
+            finish()
+        }
+        }
 
-    private fun xuLyChonSoThich() {
-       var strSoThich = ""
-        if (binding.cbNgheNhac.isChecked)
-            strSoThich += binding.cbNgheNhac.text.toString() + "\n"
-        if (binding.CbXemPhim.isChecked)
-            strSoThich += binding.CbXemPhim.text.toString() + "\n"
-        if (binding.cbBongDa.isChecked)
-            strSoThich += binding.cbBongDa.text.toString() + "\n"
-        if (binding.cbChoiCau.isChecked)
-            strSoThich += binding.cbChoiCau.text.toString() + "\n"
-        binding.edtSothich.setText(strSoThich)
-    }
 }
