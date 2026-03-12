@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">layout</string>
+    <string-array name="arrQuocGia">
+        <item>Việt Nam</item>
+        <item>Thái Lan</item>
+        <item>Hà Lan</item>
+        <item>Ba Lan</item>
+        <item>Tam Lan</item>
+    </string-array>
 </resources>

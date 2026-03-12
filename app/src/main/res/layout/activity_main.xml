@@ -1,50 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:paddingRight="20dp"
-    android:paddingLeft="20dp"
-    android:layout_marginTop="50dp"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
+    <ListView
+        android:id="@+id/lvPhim"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Chọn hình để hiển thị" />
-
-    <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
-        <RadioButton
-            android:id="@+id/rdHinh1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ảnh 1" />
-
-        <RadioButton
-            android:id="@+id/rdHinh2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ảnh 2" />
-
-    </RadioGroup>
-
-    <ImageView
-        android:id="@+id/imgHinhAnh"
-        android:layout_width="wrap_content"
-        android:layout_height="460dp"
-        android:scaleType="fitStart"
-        app:srcCompat="@drawable/hinh1" />
-
-    <ImageButton
-        android:id="@+id/btnThoat"
-        android:layout_width="120dp"
-        android:layout_height="80dp"
-        app:srcCompat="@drawable/hinh2" />
+        android:layout_height="match_parent" />
 </LinearLayout>
