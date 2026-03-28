@@ -1,7 +1,4 @@
 package com.example.layout
 
-
-// khai bao contrucstor
-class OutData (val img: Int, val txt1: String, val txt2: String){
-
+class OutData(val images: Int, val title: String, val desc: String) {
 }
