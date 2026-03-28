@@ -1,4 +1,4 @@
 package com.example.layout
 
-class OutData(val images: Int, val title: String, val desc: String) {
+class OutData(val image: Int, val txt: String ) {
 }
