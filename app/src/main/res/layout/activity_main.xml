@@ -7,14 +7,28 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/custom_spinner"
+    <EditText
+        android:id="@+id/editTextText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Custom Sprinner" />
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Mời ba nhập tên vào đây"
+         />
 
-    <Spinner
-        android:id="@+id/spCustom"
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Select tỉnh thành" />
+
+    <AutoCompleteTextView
+        android:id="@+id/autoTinhThanh"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:completionThreshold="2"
+        android:hint="Tỉnh thành bạn chọn ở đây"
+        />
 </LinearLayout>
