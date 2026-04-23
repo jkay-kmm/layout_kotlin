@@ -12,6 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Layout">
         <activity
+            android:name=".login"
+            android:theme="@style/Theme.AppCompat.Dialog"
+            android:exported="false" />
+        <activity
             android:name=".register"
             android:exported="false" />
         <activity

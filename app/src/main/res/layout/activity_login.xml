@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/design_default_color_primary"
     android:orientation="vertical"
-    tools:context=".register">
+    tools:context=".login">
 
     <TextView
         android:id="@+id/textView"
@@ -16,6 +16,6 @@
         android:textSize="40dp"
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
-        android:text="Màn 2" />
+        android:text="Màn 3" />
 
 </LinearLayout>

@@ -2,12 +2,14 @@ package com.example.layout
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log.i
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.ListView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.layout.databinding.ActivityMainBinding
 import kotlin.jvm.java
 
@@ -18,24 +20,20 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.btnGo.setOnClickListener {
-           val i = Intent(this, register::class.java)
-//            i.putExtra("data", "Hello")
-//            i.putExtra("data2", "Hello2")
-//            i.putExtra("data3", true)
-            val z = Bundle()
-            z.putString("data", "Hello")
-            z.putString("data2", "Hello2")
-            z.putBoolean("data3", true)
-            i.putExtras(z)
+
+        val ds = mutableListOf<OutData_Recycler>()
+        ds.add(OutData_Recycler(R.drawable.hinh1, "Tên Phim, Lượt Xem", "Mô tả"))
+        ds.add(OutData_Recycler(R.drawable.hinh2, "Tên Phim, Lượt Xem", "Mô tả"))
+        ds.add(OutData_Recycler(R.drawable.hinh3, "Tên Phim, Lượt Xem", "Mô tả"))
+
+        val adapter = RvAdapter(ds)
+        binding.rvDemo.adapter = adapter
+        binding.rvDemo.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 
 
-            startActivity(i)
-        }
-        binding.btnGo2.setOnClickListener {
-            val i = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com"))
-            startActivity(i)
-        }
+
+
+
 
     }
 }

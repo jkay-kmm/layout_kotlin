@@ -8,18 +8,8 @@
     android:background="@drawable/layoutdemo"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btnGo"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDemo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="15dp"
-        android:text="Go to tới màn 2" />
-    <Button
-        android:id="@+id/btnGo2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="15dp"
-        android:text="Go to tới màn 3" />
+        android:layout_height="match_parent" />
 </LinearLayout>
